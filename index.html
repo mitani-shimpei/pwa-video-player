@@ -40,7 +40,8 @@
     <input id="videoInput" type="file" accept="video/*" />
   </label>
 
-  <video id="player" controls playsinline x-webkit-airplay="allow"></video>
+  <!-- preload="auto" を明示し、ユーザー操作で再生開始後にAirPlayへ切り替える -->
+  <video id="player" controls playsinline preload="auto" x-webkit-airplay="allow"></video>
 
   <script>
     const input = document.getElementById("videoInput");
